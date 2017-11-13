@@ -1,2 +1,2 @@
-//= require './main.js'
 //= require './jquery.js'
+//= require './main.js'

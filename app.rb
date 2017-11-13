@@ -1,14 +1,29 @@
 # install and require all dependencies
 require 'sinatra'
+require 'activerecord'
 require 'sprockets'
 require 'sprockets-helpers'
 require 'uglifier'
 require 'sass'
+require 'yaml'
 
 set :static, true
+set :port, 8000
+set :host, '0.0.0.0'
 set :public_folder, 'static'
 set :views, 'views'
 set :sessions, true
+
+YAML::load(File.open('config/database.yml'))[env].symbolize_keys.each do |key, value|
+  set key, value
+end
+
+ActiveRecord::Base.establish_connection(
+  adapter: "mysql2", 
+  host: settings.db_host,
+  database: settings.db_name,
+  username: settings.db_username,
+  password: settings.db_password)
 
 class NAME < Sinatra::Base
   set :sprockets, Sprockets::Environment.new(root)

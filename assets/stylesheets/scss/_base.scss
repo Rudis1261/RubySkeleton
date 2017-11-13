@@ -1,3 +1,43 @@
 body {
-  background: orange;
+  background: #f7f7f7;
+  font-family: $font-family;
+
+  > .container {
+    margin: 100px auto 10px;
+    //max-width: $screenJumbo;
+    max-width: 500px;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 1px #a1a1a1, 1px 1px 25px rgba(#000, 0.05);
+    @include border-radius(5px);
+
+    > h1 {
+      margin-top: 10px;
+    }
+
+    > img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+code {
+  display: inline-block;
+  padding: 8px 12px;
+  white-space: pre-line;
+  background: #f2f2f2;
+  text-align: left;
+  border: 1px solid darken(#f2f2f2, 5%);
+  @include border-radius(4px);
+}
+
+@include mobile {
+  body {
+    padding: 0 10px;
+    > .container {
+      margin: 10px auto;
+    }
+  }
 }

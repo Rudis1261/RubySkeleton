@@ -1,1 +1,6 @@
-document.write("I am writting my JS");
+$(function() {
+    setTimeout(function() {
+        $('.status').text("JS Ready, and firing")
+                    .css('color', '#bada55');
+    }, 3000);
+});

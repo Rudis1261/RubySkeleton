@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RubySkeleton - Ruby Sinatra Base</title>
+    <meta name="description" content="RubySkeleton - Ruby Sinatra Base">
+    <meta name="author" content="Rudi Strydom">
+
+    <link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+  <script async="true" src="<%= javascript_path 'application' %>"></script>
+</html>

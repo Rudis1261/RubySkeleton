@@ -1,0 +1,8 @@
+development:
+  db_name: 'skeleton'
+  db_host: 'localhost'
+  db_username: 'root'
+  db_password: 'root'
+
+production:
+  &development
