@@ -1,34 +1,24 @@
 # install and require all dependencies
 require 'sinatra'
-require 'activerecord'
+require 'sinatra/activerecord'
 require 'sprockets'
 require 'sprockets-helpers'
 require 'uglifier'
 require 'sass'
-require 'yaml'
+
 
 set :static, true
-set :port, 8000
-set :host, '0.0.0.0'
 set :public_folder, 'static'
 set :views, 'views'
 set :sessions, true
 
-YAML::load(File.open('config/database.yml'))[env].symbolize_keys.each do |key, value|
-  set key, value
+class User < ActiveRecord::Base
 end
-
-ActiveRecord::Base.establish_connection(
-  adapter: "mysql2", 
-  host: settings.db_host,
-  database: settings.db_name,
-  username: settings.db_username,
-  password: settings.db_password)
 
 class NAME < Sinatra::Base
   set :sprockets, Sprockets::Environment.new(root)
   set :assets_prefix, '/assets'
-  set :digest_assets, true
+  set :digest_assets, false
 
   configure do
     # Setup Sprockets
@@ -40,14 +30,14 @@ class NAME < Sinatra::Base
     Sprockets::Helpers.configure do |config|
       config.environment = sprockets
       config.prefix      = assets_prefix
-      #config.digest      = digest_assets
+      config.digest      = digest_assets
       config.digest      = digest_assets
       config.public_path = public_folder
 
       # Force to debug mode in development mode
       # Debug mode automatically sets
       # expand = true, digest = false, manifest = false
-      # config.debug       = true if development?
+      config.debug       = true if development?
     end
   end
 
@@ -71,6 +61,6 @@ class NAME < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    erb :index, :locals => { :users => User.all }
   end
 end

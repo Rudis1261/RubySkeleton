@@ -1,0 +1,1 @@
+users = User.create([{ name: 'Test' }, { name: 'Admin' }])

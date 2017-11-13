@@ -1,8 +1,13 @@
+default: &default
+  adapter: mysql2
+  database: skeleton
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3306
+
 development:
-  db_name: 'skeleton'
-  db_host: 'localhost'
-  db_username: 'root'
-  db_password: 'root'
+  <<: *default
 
 production:
-  &development
+  <<: *default

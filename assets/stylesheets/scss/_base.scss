@@ -4,7 +4,6 @@ body {
 
   > .container {
     margin: 100px auto 10px;
-    //max-width: $screenJumbo;
     max-width: 500px;
     padding: 20px;
     background: #fff;
@@ -19,6 +18,18 @@ body {
     > img {
       margin: 0 auto;
       display: block;
+    }
+
+    > .users {
+      h4 {
+        margin: 20px 0 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
     }
   }
 }
