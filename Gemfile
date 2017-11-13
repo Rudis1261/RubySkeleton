@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'sprockets'
+gem 'sprockets-helpers'
+gem 'uglifier'
+gem 'sass'
+gem 'rack', '~> 2.0.1'
