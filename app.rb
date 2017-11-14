@@ -1,4 +1,4 @@
-# install and require all dependencies
+# Dependencies
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sprockets'
@@ -6,22 +6,30 @@ require 'sprockets-helpers'
 require 'uglifier'
 require 'sass'
 
-
 set :static, true
 set :public_folder, 'static'
 set :views, 'views'
 set :sessions, true
+set :root, File.dirname(__FILE__)
 
-class User < ActiveRecord::Base
-end
+# Require all the things, models, routes
+Dir['helpers/*.rb', 'models/*.rb', 'routes/*.rb'].each {|file| require_relative file }
 
+# Main app
 class NAME < Sinatra::Base
   set :sprockets, Sprockets::Environment.new(root)
   set :assets_prefix, '/assets'
   set :digest_assets, false
 
+  # Routing
+  register Sinatra::NAME::Routing::Base
+  register Sinatra::NAME::Routing::Admin
+
+  # Helpers
+  helpers Sinatra::NAME::Helpers
+
+  # Setup Sprockets
   configure do
-    # Setup Sprockets
     sprockets.append_path File.join(root, 'assets', 'stylesheets')
     sprockets.append_path File.join(root, 'assets', 'javascripts')
     sprockets.append_path File.join(root, 'assets', 'images')
@@ -58,9 +66,5 @@ class NAME < Sinatra::Base
   get "/assets/*" do
     env["PATH_INFO"].sub!("/assets", "")
     settings.sprockets.call(env)
-  end
-
-  get '/' do
-    erb :index, :locals => { :users => User.all }
   end
 end
