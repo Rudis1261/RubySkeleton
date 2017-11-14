@@ -16,6 +16,6 @@ Gem::Specification.new do |spec|
 
   spec.files            = Dir['{bin,lib,man,test,spec}/**/*', 'README*', 'LICENSE*'] & `git ls-files -z`.split("\0")
   spec.executables      = ['app.rb']
-  spec.test_files       = ['tests/test_NAME.rb']
-  spec.require_paths    = ["lib"]
+  spec.test_files       = ['spec/app_spec.rb']
+  spec.require_paths    = ['lib']
 end

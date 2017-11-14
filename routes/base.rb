@@ -4,15 +4,15 @@ module Sinatra
       module Base
         def self.registered(app)
           home = lambda do
-            @message = session[:test]
-            erb :index, :locals => { :users => User.all, :test => session[:test] }
+            @message = session[:tests]
+            erb :index, :locals => { :users => User.all, :tests => session[:tests] }
           end
 
           app.get  '/', &home
 
           test = lambda do
-            session[:test] = params[:test]
-            puts "Received test data #{params[:test]}"
+            session[:tests] = params[:tests]
+            puts "Received test data #{params[:tests]}"
             redirect '/'
           end
 
