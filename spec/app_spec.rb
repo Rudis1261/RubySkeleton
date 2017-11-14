@@ -21,6 +21,15 @@ describe NAME do
     end
   end
 
+  context "Logoff" do
+    #let(:response) { get "/logoff", {}, 'rack.session' => {:user_id => 9999} }
+    let(:response) { get "/logoff" }
+
+    it "Should redirect" do
+      expect(response).to redirect_to "/"
+    end
+  end
+
   context "Admin Sections" do
     let(:response) { get "/admin" }
 

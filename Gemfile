@@ -10,6 +10,7 @@ gem 'sass'
 gem 'rerun'
 gem 'rack', '~> 2.0.1'
 gem 'rake'
+gem 'bcrypt'
 
 group :test, :development do
   gem 'rspec'

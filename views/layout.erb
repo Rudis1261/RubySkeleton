@@ -9,7 +9,18 @@
     <link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="header">
+        <img src="<%= asset_path 'logo.png' %>" alt="" />
+        <h1>RubySkeleton - Ruby Sinatra Base</h1>
+      </div>
+      <ul class="navigation">
+        <li><a href="/">Home</a></li>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/logoff">Logoff</a></li>
+      </ul>
+      <%= yield %>
+    </div>
   </body>
   <script async="true" src="<%= javascript_path 'application' %>"></script>
 </html>

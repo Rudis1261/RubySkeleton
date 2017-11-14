@@ -10,7 +10,7 @@ module Sinatra
       end
 
       def logged_in?
-        return !!session[:user_id]
+        return !!session[:nid]
       end
 
       def is_admin?

@@ -12,11 +12,17 @@ module Sinatra
 
           test = lambda do
             session[:tests] = params[:tests]
-            puts "Received test data #{params[:tests]}"
+            redirect '/'
+          end
+
+          logoff = lambda do
+            session[:nid] = nil
+            session[:admin] = nil
             redirect '/'
           end
 
           app.get  '/', &home
+          app.get  '/logoff', &logoff
           app.post  '/', &test
         end
       end
