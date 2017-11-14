@@ -21,4 +21,13 @@ require 'sass'</code>
         </ul>
     </div>
     <% end %>
+
+    <div class="test">
+      <h4>Set test session data</h4>
+      <%= @message %>
+      <form action="/" method="post">
+        <input type="text" placeholder="Some test data" name="test" />
+        <input type="submit" />
+      </form>
+    </div>
 </div>

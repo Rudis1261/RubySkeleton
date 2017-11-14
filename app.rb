@@ -6,12 +6,6 @@ require 'sprockets-helpers'
 require 'uglifier'
 require 'sass'
 
-set :static, true
-set :public_folder, 'static'
-set :views, 'views'
-set :sessions, true
-set :root, File.dirname(__FILE__)
-
 # Require all the things, models, routes
 Dir['helpers/*.rb', 'models/*.rb', 'routes/*.rb'].each {|file| require_relative file }
 
@@ -20,6 +14,13 @@ class NAME < Sinatra::Base
   set :sprockets, Sprockets::Environment.new(root)
   set :assets_prefix, '/assets'
   set :digest_assets, false
+  set :static, true
+  set :public_folder, 'static'
+  set :views, 'views'
+  set :session_secret, 'Super awesome secret, about the quick brown fox'
+  enable :sessions
+
+  set :root, File.dirname(__FILE__)
 
   # Routing
   register Sinatra::NAME::Routing::Base
