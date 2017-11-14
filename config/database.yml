@@ -11,3 +11,7 @@ development:
 
 production:
   <<: *default
+  host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
+  database: <%= ENV['DB_NAME'] || 'skeleton' %>
+  username: <%= ENV['DB_USER'] || 'root' %>
+  password: <%= ENV['DB_PASS'] || 'root' %>
