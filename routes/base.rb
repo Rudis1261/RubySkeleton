@@ -12,12 +12,14 @@ module Sinatra
 
           test = lambda do
             session[:tests] = params[:tests]
+            puts params[:tests]
             redirect '/'
           end
 
           logoff = lambda do
             session[:nid] = nil
             session[:admin] = nil
+            session.clear
             redirect '/'
           end
 
