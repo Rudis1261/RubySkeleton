@@ -80,6 +80,11 @@ code {
   @include border-radius(4px);
 }
 
+.error {
+  color: #d61212;
+  font-size: 12px;
+}
+
 @include mobile {
   body {
     padding: 0 10px;

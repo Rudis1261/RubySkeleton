@@ -1,1 +1,20 @@
-This is where you would login as an Admin
+<h4>Login Admin</h4>
+
+<form method="post">
+  <% if errors.size > 0 %>
+  <% errors.each do |error| %>
+      <div class="error"><%= error %></div>
+  <% end %>
+  <% end %>
+  <label for="username_or_email">
+    <span>Username / Email Address</span>
+    <input type="text" id="username_or_email" name="username_or_email" placeholder="iam@thatuy.co.za / bounce" />
+  </label>
+  <label for="password">
+    <span>Password</span>
+    <input type="password" id="password" name="password" placeholder="password" />
+  </label>
+  <input type="submit" />
+</form>
+
+<a href="/admin/register">Register</a>
