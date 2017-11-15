@@ -13,7 +13,15 @@
 ActiveRecord::Schema.define(version: 20171113200449) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
+    t.string "username", limit: 200
+    t.string "email", limit: 254
+    t.string "hash", limit: 60
+    t.string "nonce", limit: 36
+    t.integer "activated", limit: 1, default: 0, unsigned: true
+    t.string "activation_code", limit: 36
+    t.string "password_reset", limit: 36
+    t.integer "locked", limit: 1, default: 0, unsigned: true
+    t.string "role", limit: 9, default: "user"
   end
 
 end

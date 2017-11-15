@@ -14,12 +14,17 @@ module Sinatra
         # Generate a hash with the user's password + salt
         # Store both the salt and the resulting hash in the db
 
+        #salt = SecureRandom.uuid()
+        #hash = BCrypt::Password.create("awesomePassword" + salt, cost: 10)
+
         def hash_password(password)
           if password.empty?
             return nil
           end
 
           return BCrypt::Password.create(password, cost: self.cost.to_i)
+          # Restoring stored string as a hash
+          #restored_hash = BCrypt::Password.new
         end
 
         # This will be used to challenge the user's login attempt
