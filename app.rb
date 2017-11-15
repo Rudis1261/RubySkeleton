@@ -22,11 +22,12 @@ class NAME < Sinatra::Base
   enable :sessions
 
   # Routing
-  register Sinatra::NAME::Routing::Base
-  register Sinatra::NAME::Routing::Admin
+  register Routes
+  register AdminRoutes
 
   # Helpers
-  helpers Sinatra::NAME::Helpers
+  helpers ApplicationHelpers
+  helpers AuthHelpers
 
   # Setup Sprockets
   configure do

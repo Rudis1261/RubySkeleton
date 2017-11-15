@@ -83,9 +83,15 @@ datalist {
 }
 
 label {
-  display: $fh-display;
+  //@include center-layout;
+  display: inline-block;
   margin-bottom: 20px;
-  @include center-layout;
+
+  > span {
+    text-align: left;
+    display: block;
+    margin-bottom: -8px;
+  }
 }
 
 
