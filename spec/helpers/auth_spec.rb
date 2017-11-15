@@ -22,11 +22,11 @@ describe AuthHelpers do
     expect(subject.new.create_hash 'test').to be_an_instance_of BCrypt::Password
   end
 
-  it 'Should be able to compare restored hashes' do
+  it 'Should be able to compare restored hashes manually' do
     expect(@restored_hash).to eq(@password + @salt)
   end
 
-  it 'Should be able to compare do a comparison' do
+  it 'Should be able do a comparison' do
     expect(@compare_hash).to be true
   end
 end
