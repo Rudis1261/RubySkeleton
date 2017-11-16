@@ -2,24 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RubySkeleton - Ruby Sinatra Base</title>
+    <title>RubySkeleton</title>
     <meta name="description" content="RubySkeleton - Ruby Sinatra Base">
     <meta name="author" content="Rudi Strydom">
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
     <link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
   </head>
   <body>
     <div class="container">
+
       <div class="header">
-        <img src="<%= asset_path 'logo.png' %>" alt="" />
-        <h1>RubySkeleton - Ruby Sinatra Base</h1>
+        <a href="/">
+          <img src="<%= asset_path 'logo.png' %>" alt="" />
+          <h1>RubySkeleton</h1>
+        </a>
       </div>
+
       <ul class="navigation">
         <li><a href="/">Home</a></li>
-        <li><a href="/admin">Admin</a></li>
-        <li><a href="/logoff">Logoff</a></li>
+        <% if @user.nil? %>
+          <li><a href="/login">Login</a></li>
+        <% else %>
+          <li><a href="/account">Account</a></li>
+          <% if @user.role == 'admin' %>
+                <li><a href="/admin">Admin</a></li>
+          <% end %>
+          <li><a href="/logoff">Logoff</a></li>
+        <% end %>
       </ul>
+
       <%= yield %>
+
     </div>
   </body>
   <script async="true" src="<%= javascript_path 'application' %>"></script>

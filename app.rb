@@ -19,7 +19,7 @@ class App < Sinatra::Base
   set :public_folder, 'public'
   set :views, 'views'
   #set :method_override, true # when using post for put / delete etc...
-  set :session_secret, 'Super awesome secret, about the quick brown fox'
+  set :session_secret, 'Super awesome random session string'
   enable :sessions
 
   # Setup Sprockets
@@ -54,5 +54,6 @@ class App < Sinatra::Base
 
   # Controllers
   use ApplicationController
+  use AccountController
   use AdminController
 end

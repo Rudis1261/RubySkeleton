@@ -11,18 +11,33 @@ body {
     box-shadow: 0 0 1px #a1a1a1, 1px 1px 25px rgba(#000, 0.05);
     @include border-radius(5px);
 
-    > h1 {
-      margin-top: 10px;
-    }
+    .header {
+      margin: 0 0 15px;
 
-    > img {
-      margin: 0 auto;
-      display: block;
+      a {
+        text-decoration: none;
+        color: #222;
+        @include clearfix();
+
+
+        > img {
+          float: left;
+          margin: 0 auto;
+          display: block;
+        }
+
+        > h1 {
+          float: left;
+          font-size: 18px;
+          margin: 20px;
+        }
+      }
     }
 
     ul.navigation {
       margin: 0 auto 20px;
-      padding: 0;
+      padding: 0 0 20px;
+      border-bottom: 1px solid #eee;
       list-style: none;
       @include flex-display();
       @include align-items(center);
