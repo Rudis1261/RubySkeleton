@@ -1,3 +1,3 @@
 # app/config.ru
 require './app'
-run NAME.new
+run App.new

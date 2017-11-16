@@ -6,28 +6,21 @@ require 'sprockets-helpers'
 require 'uglifier'
 require 'sass'
 
-# Require all the things, models, routes
-Dir.glob('{helpers,models,routes}/*.rb').each {|file| require_relative file }
+# Require all the things, models, helpers, controller
+Dir.glob('app/{models,helpers,controllers}/*.rb').each {|file| require_relative file }
 
 # Main app
-class NAME < Sinatra::Base
+class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
   set :sprockets, Sprockets::Environment.new(root)
   set :assets_prefix, '/assets'
   set :digest_assets, false
   set :static, true
-  set :public_folder, 'static'
+  set :public_folder, 'public'
   set :views, 'views'
+  #set :method_override, true # when using post for put / delete etc...
   set :session_secret, 'Super awesome secret, about the quick brown fox'
   enable :sessions
-
-  # Routing
-  register Routes
-  register AdminRoutes
-
-  # Helpers
-  helpers ApplicationHelpers
-  helpers AuthHelpers
 
   # Setup Sprockets
   configure do
@@ -50,16 +43,6 @@ class NAME < Sinatra::Base
     end
   end
 
-  helpers do
-    include Sprockets::Helpers
-
-    # Alternative method for telling Sprockets::Helpers which
-    # Sprockets environment to use.
-    # def assets_environment
-    #   settings.sprockets
-    # end
-  end
-
   # compress assets
   sprockets.js_compressor  = :uglify
   sprockets.css_compressor = :scss
@@ -68,4 +51,8 @@ class NAME < Sinatra::Base
     env["PATH_INFO"].sub!("/assets", "")
     settings.sprockets.call(env)
   end
+
+  # Controllers
+  use ApplicationController
+  use AdminController
 end

@@ -6,8 +6,8 @@ RSpec.configure do |config|
   config.mock_with :rspec
 end
 
-describe NAME do
-  let(:app) { NAME.new }
+describe App do
+  let(:app) { App.new }
 
   context "Home Page" do
     let(:response) { get "/" }

@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../app.rb'
 
-Dir.glob('../{helpers,models,routes}/*.rb').each {|file| require_relative file }
+Dir.glob('../app/{helpers,models,routes}/*.rb').each {|file| require_relative file }
 
 require "rack/test"
 require "rspec-html-matchers"
