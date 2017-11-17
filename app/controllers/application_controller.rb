@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   get '/login' do
     @redirect = params[:redirect] ||= false
-    erb :'login', locals: { :errors => [] }
+    erb :'login', locals: { :errors => [], :error_message => false }
   end
 
   get '/register' do
@@ -39,7 +39,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    errors = []
+    errors = {}
+    error_message = ''
     if params[:username_or_email].empty? || params[:password].empty?
       if params[:username_or_email].empty?
         errors << 'No username / email provided'
@@ -47,13 +48,13 @@ class ApplicationController < Sinatra::Base
       if params[:password].empty?
         errors << 'No password provided'
       end
-      return erb :'login', locals: { :errors => errors }
+      return erb :'login', locals: { :errors => errors, :error_message => error_message }
     end
 
     success, user = User.login(params)
     if !success || !user || !user.id
       errors << 'Login failed'
-      return erb :'login', locals: { :errors => errors }
+      return erb :'login', locals: { :errors => errors, :error_message => error_message }
     end
 
     session[:user_id] = user.id

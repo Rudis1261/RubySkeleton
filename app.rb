@@ -18,6 +18,7 @@ class App < Sinatra::Base
   set :static, true
   set :public_folder, 'public'
   set :views, 'views'
+  set :show_exceptions, false
   #set :method_override, true # when using post for put / delete etc...
   set :session_secret, 'Super awesome random session string'
   enable :sessions
@@ -56,4 +57,14 @@ class App < Sinatra::Base
   use ApplicationController
   use AccountController
   use AdminController
+
+  error do
+    puts env['sinatra.error'].inspect
+    #render_error 500, _('Internal Server Error'), env['sinatra.error'].message
+  end
+
+  error Sinatra::NotFound do
+    content_type 'text/plain'
+    [404, 'Not Found']
+  end
 end
