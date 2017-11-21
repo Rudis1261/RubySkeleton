@@ -25,7 +25,7 @@ describe App do
     #let(:response) { get "/logoff", {}, 'rack.session' => {:user_id => 9999} }
     let(:response) { get "/logoff" }
 
-    it "Should redirect" do
+    it "Should redirect home" do
       expect(response).to redirect_to "/"
     end
   end
@@ -33,8 +33,8 @@ describe App do
   context "Admin Sections" do
     let(:response) { get "/admin" }
 
-    it "Shoud redirect" do
-      expect(response).to redirect_to "/admin/login"
+    it "Shoud redirect to login" do
+      expect(response).to redirect_to "/login"
     end
   end
 end

@@ -1,6 +1,7 @@
 class ApplicationController < Sinatra::Base
   include Sprockets::Helpers
   include AuthHelpers
+  include ApplicationHelpers
 
   set :views, File.expand_path('../../../views', __FILE__)
 
@@ -16,12 +17,6 @@ class ApplicationController < Sinatra::Base
     erb :index, :locals => { :users => User.all, :tests => session[:tests] }
   end
 
-  post '/' do
-    session[:tests] = params[:tests]
-    puts params[:tests]
-    redirect '/'
-  end
-
   get '/logoff' do
     session[:nid] = nil
     session[:admin] = nil
@@ -31,30 +26,33 @@ class ApplicationController < Sinatra::Base
 
   get '/login' do
     @redirect = params[:redirect] ||= false
-    erb :'login', locals: { :errors => [], :error_message => false }
+    erb :'login', locals: { :errors => {}, :error_messages => [] }
   end
 
   get '/register' do
-    erb :'register'
+    @redirect = params[:redirect] ||= false
+    erb :'register', locals: { :errors => {}, :error_messages => [] }
   end
 
   post '/login' do
     errors = {}
-    error_message = ''
+    error_messages = []
     if params[:username_or_email].empty? || params[:password].empty?
       if params[:username_or_email].empty?
-        errors << 'No username / email provided'
+        errors['username_or_email'] = true
       end
       if params[:password].empty?
-        errors << 'No password provided'
+        errors['password'] = true
       end
-      return erb :'login', locals: { :errors => errors, :error_message => error_message }
+      error_messages << 'Complete the fields'
+
+      return erb :'login', locals: { :errors => errors, :error_messages => error_messages }
     end
 
     success, user = User.login(params)
     if !success || !user || !user.id
-      errors << 'Login failed'
-      return erb :'login', locals: { :errors => errors, :error_message => error_message }
+      error_messages << 'Login failed'
+      return erb :'login', locals: { :errors => errors, :error_messages => error_messages }
     end
 
     session[:user_id] = user.id

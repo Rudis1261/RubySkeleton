@@ -23,15 +23,16 @@
       </div>
 
       <ul class="navigation">
-        <li><a href="/">Home</a></li>
+        <li><%= link('/', 'Home') %></li>
         <% if @user.nil? %>
-          <li><a href="/login">Login</a></li>
+          <li><%= link('/login', 'Login') %></li>
+          <li><%= link('/register', 'Register') %></li>
         <% else %>
-          <li><a href="/account">Account</a></li>
+          <li><%= link('/account', 'Account') %></li>
           <% if @user.role == 'admin' %>
-                <li><a href="/admin">Admin</a></li>
+                <li><%= link('/admin', 'Admin') %></li>
           <% end %>
-          <li><a href="/logoff">Logoff</a></li>
+          <li><%= link('/logoff', 'Logoff') %></li>
         <% end %>
       </ul>
 
