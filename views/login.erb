@@ -7,8 +7,16 @@
     <br />
   <% end %>
 
-  <%= input('username_or_email', 'Username / Email address', { :placeholder => 'iam@thatguy.co.za', :errors => errors }) %>
-  <%= input('password', 'Password', { :placeholder => '**********', :type => 'password', :errors => errors }) %>
+  <%= input('username_or_email', 'Username / Email address', {
+      :placeholder => 'iam@thatguy.co.za',
+      :errors => errors
+  }) %>
+
+  <%= input('password', 'Password', {
+      :placeholder => '**********',
+      :type => 'password',
+      :errors => errors
+  }) %>
 
   <input type="submit" />
 </form>
