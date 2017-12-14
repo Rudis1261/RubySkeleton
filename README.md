@@ -5,11 +5,14 @@
 You will have had to had installed at least Ruby, and MySQL for this to work. The intention of this is to create a small bootstrap framework to be able to get going quickly. This includes an asset pipeline, testing and Active Record.
 
 ### Bundle
-    ```shell
+
+```shell
 # Bundle install all the things
 bundle install
 ```
+
 ### Rake
+
 ```shell
 # To see the ActiveRecord options
 bundle exec rake -T
