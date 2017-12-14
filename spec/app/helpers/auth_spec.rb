@@ -10,16 +10,16 @@ describe AuthHelpers do
     @password = 'test password'
     @stored_hash = '$2a$10$ZyAeBMXNyOQLaPmGNBHQYeAGk8xDZDBvpUjMV.LBmrgLdz17nK8U.'
 
-    @restored_hash = subject.new.restore_hash @stored_hash
-    @compare_hash = subject.new.compare_hash(@password, @salt, @stored_hash)
+    @restored_hash = AuthHelpers.restore_hash @stored_hash
+    @compare_hash = AuthHelpers.compare_hash(@password, @salt, @stored_hash)
   end
 
   it 'Should generate a salt of 36 chars long' do
-    expect(subject.new.create_salt.size).to eq(36)
+    expect(AuthHelpers.create_salt.size).to eq(36)
   end
 
   it 'Should generate a hash based on a salt + password' do
-    expect(subject.new.create_hash 'test').to be_an_instance_of BCrypt::Password
+    expect(AuthHelpers.create_hash 'test').to be_an_instance_of BCrypt::Password
   end
 
   it 'Should be able to compare restored hashes manually' do
