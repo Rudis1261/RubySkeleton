@@ -1,0 +1,318 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 124.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 497.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rudis1261/GitHub/RubySkeleton"
+	],
+	"file_history":
+	[
+		"/home/rudis1261/GitHub/RubyMigrations/config.ru",
+		"/home/rudis1261/GitHub/RubyMigrations/config/database.yml",
+		"/home/rudis1261/GitHub/RubyMigrations/Gemfile",
+		"/home/rudis1261/GitHub/RubyMigrations/.editorconfig",
+		"/home/rudis1261/GitHub/RubyMigrations/app.rb",
+		"/home/rudis1261/GitHub/RubyMigrations/media_file_server.rb",
+		"/home/rudis1261/GitHub/RubyMigrations/uploader.rb",
+		"/home/rudis1261/GitHub/RubySkeleton/README.md",
+		"/home/rudis1261/GitHub/RubySkeleton/spec/app/helpers/auth_spec.rb",
+		"/home/rudis1261/GitHub/RubySkeleton/Rakefile",
+		"/home/rudis1261/GitHub/RubySkeleton/spec/app_spec.rb",
+		"/home/rudis1261/GitHub/RubySkeleton/app/helpers/auth.rb",
+		"/home/rudis1261/Documents/counters.txt",
+		"/home/rudis1261/WorkStuffs/server_logs.sh",
+		"/home/rudis1261/WorkStuffs/general.txt",
+		"/home/rudis1261/.bashrc",
+		"/home/rudis1261/.gitconfig",
+		"/home/rudis1261/.bash_aliases",
+		"/home/rudis1261/Downloads/50.cal.stl",
+		"/home/rudis1261/Projects/konsoleh/awstats_logs.txt",
+		"/home/rudis1261/WorkStuffs/validation_logging_check_in_logs.sh",
+		"/home/rudis1261/WorkStuffs/owasp_tests.txt",
+		"/home/rudis1261/WorkStuffs/enabling_errors.php",
+		"/home/rudis1261/WorkStuffs/scratch.txt",
+		"/home/rudis1261/WorkStuffs/cors_headers.php",
+		"/home/rudis1261/Projects/konsoleh/validation_logs.txt",
+		"/home/rudis1261/WorkStuffs/validation_logging_check.sh",
+		"/home/rudis1261/Projects/smartpages/tools/new_request/request_system_submit_confirmation.php",
+		"/home/rudis1261/Projects/smartpages/appointment_makeoredit.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/billing_manage_area/invoice_details.php",
+		"/home/rudis1261/Projects/smartpages/Receiver.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/add_domains.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/lock_account/heading.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/lock_account_new.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/removal.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/restructurings/ajax.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/at_template_create_contact.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/at_transfer_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/biz_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/cno_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/coza_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/coza_delete_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/coza_update_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/eu_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/info_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/name_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/org_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/orgza_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/orgza_delete_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/orgza_update_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/template_create_contact.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/templates/tv_create_domain.php",
+		"/home/rudis1261/Projects/smartpages/account_admin/ttl_updates/ttl_updates.php",
+		"/home/rudis1261/Projects/smartpages/address_popup.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/invoices/bounced_invoices/view_bounced_billing_emails.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/invoices/create_billing_addon.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/overdue_payment_process/ajax.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/profile_transfer/transfer_Domains.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/queries/invalid_cc_details.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/queries/no_upgrade_account.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/queries/no_upgrade_addon.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/queries/uniform_Query.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/queries_other.php",
+		"/home/rudis1261/Projects/smartpages/billing_admin/terminations.php",
+		"/home/rudis1261/Projects/smartpages/client_contact_details.php",
+		"/home/rudis1261/Projects/smartpages/contact_popup.php",
+		"/home/rudis1261/Projects/smartpages/frontend/frontend.php",
+		"/home/rudis1261/Projects/smartpages/newcountry.php",
+		"/home/rudis1261/Projects/smartpages/restructure/confirmation.php",
+		"/home/rudis1261/Projects/smartpages/restructure/restructure_frontend.php",
+		"/home/rudis1261/Projects/smartpages/scripts/functions.inc.php",
+		"/home/rudis1261/Projects/smartpages/scripts/terminations.inc.php",
+		"/home/rudis1261/Projects/smartpages/tools/genie_user_admin.php",
+		"/home/rudis1261/Projects/smartpages/tools/password.php",
+		"/home/rudis1261/WorkStuffs/check_dead_code.sh",
+		"/home/rudis1261/WorkStuffs/domainAdmin.txt",
+		"/home/rudis1261/check_dead_code.sh",
+		"/home/rudis1261/Projects/konsoleh/config/deploy/live.rb",
+		"/home/rudis1261/Downloads/Domain.yml",
+		"/home/rudis1261/Downloads/Domain (2).yml",
+		"/home/rudis1261/enabling_errors.php",
+		"/home/rudis1261/Projects/hetzner_api/config/routes.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/templates/tucows_domain_info.erb",
+		"/home/rudis1261/Projects/hetzner_api/run_docker.sh",
+		"/home/rudis1261/Projects/hetzner_api/access.sql",
+		"/home/rudis1261/SQL Queries/grant_all_access_to_user.sql",
+		"/home/rudis1261/bin/create_mysql_docker.sh",
+		"/home/rudis1261/Projects/hetzner_api/config/htpasswd",
+		"/home/rudis1261/Projects/hetzner_api/config/database.yml",
+		"/home/rudis1261/Projects/hetzner_api/start_service_in_docker.sh",
+		"/home/rudis1261/Projects/hetzner_api/run_tests_singlethreaded.sh",
+		"/home/rudis1261/Projects/hetzner_api/rackup-with-mysql.yml",
+		"/home/rudis1261/Downloads/HetznerSignatureThunderbird.html",
+		"/home/rudis1261/Projects/hetzner_api/Dockerfile",
+		"/home/rudis1261/Projects/hetzner_api/config/callback_authentication.yml",
+		"/home/rudis1261/Projects/hetzner_api/config/aaapi.yml",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/bounce_notification.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/bounce_notification_runner.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/debit_order_rejection.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/transaction.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/line_item.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/invoice/proof_of_payment.rb",
+		"/home/rudis1261/Projects/hetzner_api/app/models/overdue_payment/insert_cash_invoices.rb",
+		"/home/rudis1261/Projects/hetzner_api/Rakefile",
+		"/home/rudis1261/Projects/hetzner_api/run_tests.sh",
+		"/home/rudis1261/Projects/hetzner_api/app/controllers/invoice_controller.rb",
+		"/home/rudis1261/Projects/hetzner_api/Capfile",
+		"/home/rudis1261/Projects/hetzner_api/config/application.rb",
+		"/home/rudis1261/Projects/restructure_service/config/config.yml",
+		"/home/rudis1261/Projects/restructure_service/init.d-template"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"/home/rudis1261/Projects/hetzner_api/app",
+			"/home/rudis1261/Projects/hetzner_api"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"my_rack_app",
+			"end",
+			" $(",
+			"PS1",
+			"before_value\":\"mKPUZlJ2KpS8vSv4fJ4F4WRioEBzpELQ3FNHSF2bN+sKL78BuuYTA7T10n9nSRMCRA8QplPpmdbdFv71LoaTYhz8B2rWqNdXbWnQRZOUIB2+\\/Ho9OWdUQYj\\/1AA9ZNMObxwuda0Jo2ZvPCExGx0at6yIDqsbJVnLMFzTOrZZ+17v0YQJbvnn8WM0OvluC4usF+1qHPkl9df23o2v9V2x9Hhj6IUw3BnyxYu5QDIowMJxUtJuAlPsobiKFMmBa2skwwnEt61Th8rP\\/vbuhnSoyoEyZowOTlRypDVRNKNVwaWVSfndfD8xizLuvKOWb2hj\",\"after_value\":null,\"caller\":{\"file\":\"\\/storage\\/konsoleh\\/releases\\/20171212092454\\/htdocs\\/awstats_proxy.php\",\"line\":20,\"function\":\"validated_pass_through\",\"class\":\"utils\"}}] AWSTATS_LOG request from 196.40.111.5, []",
+			"(?:before_value)",
+			"http",
+			"server_name",
+			"smart",
+			"\\[\\{.+before_value\":.+,\"after_value\":.+domainadmin_SA.+\\}\\]",
+			"[^\\]\\s]\\[.+before_value\":.+,\"after_value\":.+domainadmin_SA.+\\]",
+			"before_value\":.+,\"after_value\":.+domainadmin_SA",
+			"before_value\":(.+),\"after_value\":(.+).+domainadmin_SA",
+			"before_value\":\"(.+)\",\"after_value\":\"(.+)\".+domainadmin_SA",
+			"before_value\":\"(.+),\"after_value\":\"(.+)domainadmin_SA",
+			"domainadmin_SA",
+			"215",
+			"nonce",
+			"<? echo CSP_NONCE; ?>",
+			"nonce",
+			"ching",
+			"new_main_account",
+			"(?:\\$_)(REQ|POST|GET|SESSION) #Finding all get /request / post / sessions variables in a file",
+			"?????\"",
+			"CONTINUE",
+			"mail",
+			"\"",
+			"invoices_and_refunds",
+			"OverduePayment",
+			"OverdueParyment:",
+			"load",
+			"load_tasks"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"$1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "RubyMigrations.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
